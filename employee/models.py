@@ -7,6 +7,7 @@ class Employee(models.Model):
     last_name = models.CharField ( max_length = 30 )
     email = models.CharField ( max_length = 40 )
     birth_date = models.DateField ( blank = True , null = True )
+    designation = models.CharField( max_length = 20 )
 
     def __str__(self):
         return self.first_name
