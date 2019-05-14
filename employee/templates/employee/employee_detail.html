@@ -1,6 +1,7 @@
 {% extends 'employee/base.html' %}
 
 	{% block content %}	
+	<div class="content">	
 		<b>First name : </b> {{ employee.first_name}} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<b>Last name : </b>{{ employee.last_name}}
 		<br>
@@ -8,5 +9,6 @@
 		<b>Birth date :</b>{{ employee.birth_date}}
 		<br>
 		<b>Post : </b>{{ employee.designation}}
+	</div>
 	{% endblock %}
 </html>

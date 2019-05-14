@@ -1,9 +1,10 @@
 {% extends 'employee/base.html' %}
 
-	{% block content %}	
+	{% block content %}
+
 	{% for employee in employees %}
-	    <div>
-		    <h2><a href= "{% url 'employee_detail' pk=employee.pk %}">{{ employee.first_name }}</a></h2>{{ employee.email}}
+	    <div class="content">
+		    <a href= "{% url 'employee_detail' pk=employee.pk %}">{{ employee.first_name }}</a>&emsp;{{ employee.email}}
 	    </div>
 	{% endfor %}
 	{% endblock %}

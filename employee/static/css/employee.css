@@ -1,0 +1,14 @@
+.page-header {
+    text-align:center;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1{
+	font-size :40px;
+}
+
+.content {
+    margin-left: 10px;
+    font-size : 20px;
+}
