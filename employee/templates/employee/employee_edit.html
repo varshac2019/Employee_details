@@ -3,7 +3,45 @@
 {% block content %}
     <h2>Add employee</h2>
     <form method="GET" class="get-form">{% csrf_token %}
-        {{ form.as_p }}
+         {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.subject.errors }}
+            <label for="{{ form.subject.id_for_label }}">First name:</label>
+            <input type=text name="first_name">
+            {{ form.subject }}
+        </div>
+
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.subject.errors }}
+            <label for="{{ form.subject.id_for_label }}">Last name:</label>
+            <input type=text name="last_name">
+            {{ form.subject }}
+        </div>
+
+
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.subject.errors }}
+            <label for="{{ form.subject.id_for_label }}">Email:</label>
+            <input type=text name="email">
+            {{ form.subject }}
+        </div>
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.subject.errors }}
+            <label for="{{ form.subject.id_for_label }}">Birth date:</label>
+            <input type=date name="birth_date">
+            {{ form.subject }}
+        </div>
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.subject.errors }}
+            <label for="{{ form.subject.id_for_label }}">Designation:</label>
+            <input type=text name="designation">
+            {{ form.subject }}
+        </div>
+
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 {% endblock %}
