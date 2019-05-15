@@ -13,13 +13,14 @@ def employee_detail(request, pk):
     return render(request, 'employee/employee_detail.html', {'employee': employee})
 
 def employee_new(request):
-    if request.method == "GET":
-        form = GetForm(request.GET)
+    if request.method == "POST":
+        form = PostForm(request.POST)
         if form.is_valid():
             employee = form.save()
             employee.save()
             return redirect('employee_detail', pk=employee.pk)
     else:
-        form = GetForm()
+        form = PostForm()
+
     return render(request, 'employee/employee_edit.html', {'form': form})
 
